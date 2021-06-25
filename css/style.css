@@ -59,6 +59,7 @@ header{
     opacity: 0;
     visibility: hidden;
     transition: .5s;
+    font-family: 'Barlow';
 }
 .menu-active{
     opacity: 1;
