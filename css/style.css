@@ -155,6 +155,9 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* background: blue; */
+    width: 90%;
+    max-width: 350px;
 }
 .about-info h2{
     font-family: var(--fraunces);
@@ -213,7 +216,7 @@ header{
     justify-content: center;
     position: absolute;
     bottom: 0;
-    /* background: red; */
+    background: red;
     height: 50%;
     width: 90%;
     max-width: 350px;
@@ -305,6 +308,8 @@ header{
         width: 50%;    
     }
     .about-info_element{
+        width: auto;
+        max-width: 100%;
         padding: 0;
         /* background: red; */
         display: flex;
