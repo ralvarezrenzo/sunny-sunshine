@@ -179,6 +179,61 @@ header{
     font-family: var(--fraunces);
     font-weight: 900;
 }
+/* services */
+.services{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.services-element{
+    width: 100%;
+    position: relative;
+}
+.services-element figure{
+    background: green;
+    height: 100%;
+    line-height: 0;
+}
+.services-element img{
+    width: 100%;
+    height: 100%;
+}
+.imagen1{
+    display: block;
+}
+.imagen2{
+    display: none;
+}
+.services-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    /* background: red; */
+    height: 50%;
+    width: 90%;
+    max-width: 350px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.services-info h2{
+    font-family: var(--fraunces);
+    margin-bottom: 1.1em;
+    font-size: 2em;
+}
+.services-info p{
+    font-family: var(--barlow);
+    line-height: 1.6em;
+}
+.services-info h2,
+.services-info p{
+    text-align: center;
+}
 @media screen and (min-width: 567px){
     .info-header h1{
         font-size: 44px;
@@ -243,7 +298,6 @@ header{
         justify-content: space-between;
         align-items: center;
     }
-    
     .about-element img{
         width: 50%;
     }
@@ -266,11 +320,37 @@ header{
     .about-info a{
         align-self: flex-start;
     }
+    .services-element{
+        width: 50%;
+        position: relative;
+    }
+    /* .imagen1{
+        display: none;
+    }
+    .imagen2{
+        display: block;
+    } */
 }
 @media screen and (min-width : 992px) {
     .about-info h2,
     .about-info p{
         max-width: 450px;
         text-align: left;
+    }
+    .services-info{
+        height: 55%;
+        /* background: red; */
+    }
+    .imagen1{
+        display: none;
+    }
+    .imagen2{
+        display: block;
+    }
+}
+@media screen and (min-width : 1200px){
+    .services-info{
+        height: 50%;
+        /* background: red; */
     }
 }
