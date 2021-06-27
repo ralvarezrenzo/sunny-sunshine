@@ -195,7 +195,6 @@ header{
     position: relative;
 }
 .services-element figure{
-    background: green;
     height: 100%;
     line-height: 0;
 }
@@ -216,7 +215,6 @@ header{
     justify-content: center;
     position: absolute;
     bottom: 0;
-    background: red;
     height: 50%;
     width: 90%;
     max-width: 350px;
