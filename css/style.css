@@ -25,6 +25,10 @@
 }
 body{
     scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 header{
     width: 100%;
@@ -35,6 +39,7 @@ header{
     background-image: url(../images/mobile/image-header.jpg);
     background-position: bottom center;
     background-size: cover;
+    max-width: 1400px;
 }
 .navbar{
     display: flex;
@@ -122,6 +127,10 @@ header{
     width: 90%;
     overflow: hidden;
     /* background: red; */
+}
+section{
+    width: 100%;
+    max-width: 1400px;
 }
 .about{
     width: 100%;
@@ -235,6 +244,69 @@ header{
 .services-info p{
     text-align: center;
 }
+/* Testimonial */
+.testimonial{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5em 0;
+}
+.subtitle-testimonial{
+    width: 100%;
+    /* background: red; */
+    text-align: center;
+    font-family: var(--fraunces);
+    letter-spacing: 6px;
+    color:var(--grayish-blue);
+    margin-bottom: 1em;
+}
+.testimonial-element{
+    display: flex;
+    width: 90%;
+    max-width: 350px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 52px 0;
+    /* background: red; */
+    /* margin-bottom: .5em; */
+}
+.testimonial-element img{
+    border-radius: 50%;
+    width: 90px;
+    margin-bottom: 2em;
+}
+.testimonial-element p{
+    font-family: var(--barlow);
+    text-align: center;
+    color: var(--very-dark-grayish-blue);
+    margin-bottom: 2em;
+}
+.testimonial-element h3{
+    color: var(--very-dark-desaturated-blue);
+    font-family: var(--fraunces);
+    font-weight: 900;
+    margin-bottom: 1em;
+}
+.testimonial-element span{
+    color: var(--grayish-blue);
+    font-family: var(--barlow);
+    font-size: 14px;
+}
+.sunny-images{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.sunny-images img{
+    width: 50%;
+}
+.sunny2{
+    display: none;
+}
 @media screen and (min-width: 567px){
     .info-header h1{
         font-size: 44px;
@@ -327,6 +399,32 @@ header{
         width: 50%;
         position: relative;
     }
+    .testimonial{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 6em 0;
+    }
+    .subtitle-testimonial{
+        width: 100%;
+    }
+    .testimonial-element{
+        width: 30%;
+    }
+    .sunny-images{
+        width: 100%;
+    }
+    .sunny-images img{
+        width: 25%;
+    }
+    .sunny1{
+        display: none;
+    }
+    .sunny2{
+        width: 25%;
+        display: flex;
+    }
     /* .imagen1{
         display: none;
     }
@@ -350,10 +448,24 @@ header{
     .imagen2{
         display: block;
     }
+    .testimonial{
+        padding: 7em 0;
+    }
 }
 @media screen and (min-width : 1200px){
     .services-info{
         height: 50%;
         /* background: red; */
+    }
+    .testimonial{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding: 8em 0;
+        /* background: red; */
+    }
+    .testimonial-element{
+        width: 25%;
     }
 }
