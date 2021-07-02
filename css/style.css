@@ -12,6 +12,7 @@
     --yellow: hsl(51, 100%, 49%);
     --dark-desaturated-cyan: hsl(167, 40%, 24%);
     --dark-blue: hsl(198, 62%, 26%);
+    --dark-moderate-gg: hsl(177, 47%, 61%);
     --dark-moderate-cyan: hsl(168, 34%, 41%);
     /* neutral */
     --very-dark-desaturated-blue: hsl(212, 27%, 19%);
@@ -175,6 +176,7 @@ section{
     max-width: 320px;
     text-align: center;
     font-size: 1.8em;
+    color: var(--very-dark-desaturated-blue);
 }
 .about-info p{
     font-family: var(--barlow);
@@ -183,13 +185,28 @@ section{
     width: 100%;
     max-width: 350px;
     margin-bottom: 2em;
+    color: var(--grayish-blue);
     /* background: green; */
 }
 .about-info a{
-    color: black;
+    color: var(--very-dark-desaturated-blue);
     text-decoration: none;
     font-family: var(--fraunces);
     font-weight: 900;
+    z-index: 1000;
+    position: relative;
+}
+.about-info a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: var(--soft-red);
+    border-radius: 3px;
+    z-index: -1;
+    opacity: .4;
 }
 /* services */
 .services{
@@ -235,10 +252,20 @@ section{
     font-family: var(--fraunces);
     margin-bottom: 1.1em;
     font-size: 2em;
+    /* color: var(--dark-desaturated-cyan); */
 }
 .services-info p{
     font-family: var(--barlow);
+}
+.services-info1 p,
+.services-info1 h2{
     line-height: 1.6em;
+    color: var(--dark-desaturated-cyan);
+}
+.services-info2 p,
+.services-info2 h2{
+    line-height: 1.6em;
+    color: var(--dark-blue);
 }
 .services-info h2,
 .services-info p{
@@ -278,6 +305,8 @@ section{
     width: 90px;
     margin-bottom: 2em;
 }
+.logito{
+}
 .testimonial-element p{
     font-family: var(--barlow);
     text-align: center;
@@ -307,6 +336,40 @@ section{
 .sunny2{
     display: none;
 }
+.footer{
+    /* background: var(--dark-moderate-cyan); */
+    color: var(--dark-moderate-cyan);
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 62px 0;
+    background: var(--dark-moderate-gg);
+}
+.footer h2{
+    font-family: var(--fraunces);
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+.footer-element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0;
+}
+.footer-element1 p{
+    font-family: var(--barlow);
+    padding: 0 24px;
+    font-size: 18px;
+}
+.footer-element2 i{
+    padding: 0 10px;
+    font-size: 18px;
+}
+
 @media screen and (min-width: 567px){
     .info-header h1{
         font-size: 44px;
