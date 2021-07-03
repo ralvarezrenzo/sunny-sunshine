@@ -70,6 +70,7 @@ header{
     visibility: hidden;
     transition: .5s;
     font-family: 'Barlow';
+    z-index: 2;
 }
 .menu-active{
     opacity: 1;
@@ -132,6 +133,7 @@ header{
 .svgflecha{
     /* background: red; */
     animation: arrow 2s infinite;
+    z-index: 1;
 }
 @keyframes arrow {
     0%,100%{
@@ -317,8 +319,6 @@ section{
     border-radius: 50%;
     width: 90px;
     margin-bottom: 2em;
-}
-.logito{
 }
 .testimonial-element p{
     font-family: var(--barlow);
