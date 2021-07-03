@@ -129,6 +129,19 @@ header{
     overflow: hidden;
     /* background: red; */
 }
+.svgflecha{
+    /* background: red; */
+    animation: arrow 2s infinite;
+}
+@keyframes arrow {
+    0%,100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(18px);
+        /* background: blue; */
+    }
+}
 section{
     width: 100%;
     max-width: 1400px;
@@ -337,10 +350,7 @@ section{
     display: none;
 }
 .footer{
-    /* background: var(--dark-moderate-cyan); */
     color: var(--dark-moderate-cyan);
-}
-.footer{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -360,10 +370,12 @@ section{
     align-items: center;
     padding: 32px 0;
 }
-.footer-element1 p{
+.footer-element1 a{
     font-family: var(--barlow);
     padding: 0 24px;
     font-size: 18px;
+    text-decoration: none;
+    color: var(--dark-moderate-cyan);
 }
 .footer-element2 i{
     padding: 0 10px;
@@ -496,6 +508,9 @@ section{
     } */
 }
 @media screen and (min-width : 992px) {
+    .a-menu{
+       font-size: 18px;
+    }
     .about-info h2,
     .about-info p{
         max-width: 450px;
